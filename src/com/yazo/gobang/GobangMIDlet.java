@@ -24,7 +24,7 @@ public class GobangMIDlet extends MIDlet implements CommandListener {
 
 	public GobangMIDlet() {
 		dis = Display.getDisplay(this);
-		frm = new Form(null);
+		frm = new Form("Îå×ÓÆå");
 		try {
 			img = Image.createImage("/logo.png");
 //			img = Image.createImage(img,0,0,frm.getWidth(),frm.getHeight(),0);
@@ -61,7 +61,6 @@ public class GobangMIDlet extends MIDlet implements CommandListener {
 
 	public void commandAction(Command c, Displayable s) {
 		if (c == cmdExit) {
-			destroyApp(false);
 			notifyDestroyed();
 		} else if (c == cmdStart) {
 			dis.setCurrent(gobangCanvas);
